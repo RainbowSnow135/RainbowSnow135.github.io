@@ -1,1 +1,136 @@
-<h1>cookies</h1>
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Joti+One' rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: purple;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Kavivanar', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: lightblue;
+  margin: 60px 0 0 0;
+  background: darkgrey;
+}
+h2 {
+  text-align: center;
+  color: red;
+  margin: 0px 0 70px 0;
+  font-family: 'Joti One', cursive;
+  background: lightgrey;
+}
+p {
+  color: rgba(255,1,100,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+  font-family: 'Joti One', cursive; 
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://www.modcloth.com/dw/image/v2/ABAT_PRD/on/demandware.static/-/Sites-modcloth-master/default/dw13c8904d/images/10097376_825_MAIN.jpg?sw=768&sh=1097&sm=fit");
+  background-size: 100% 150%;
+  height: 300px;
+}
+.second{
+  background-image: url("https://ludlow101.files.wordpress.com/2012/10/y.jpg");
+  background-size: 100% 120%;
+  height: 300px;
+}
+.dessert{
+  background-image: url("https://www.solidrop.net/photo-4/plus-size-xxxl-4xl-5xl-women-winter-dress-v-neck-long-maxi-velvet-dresses-elegant-ladies-formal-party-red-dresses-black-red-blue.jpg");
+  background-size: 100% 200%;
+  height: 300px;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>A's Fashion Design</h1>
+<h2>A Day In Manhattan</h2>
+<div class="first">
+  <p> New York on a Summer Day<span class="price">$99-$120</span><br />
+  <small>Looking for something to wear when the weather warms up? Just come down to one of Manhattan's top choices for modern fashion. in the summer, there is a display of swim-wear, shorts, sundresses, and even jewelry.</small></p>
+</div>
+
+<div class="second">
+  <p>As the Weather Cools <span class="price">$23-$40</span><br />
+  <small>The weather cools down but your fashion style is still hot.As Fall comes around, the people of New York want clothing that keep them warm, but still looking good. This is when A's Fashion Design switches to .</small></p>
+</div>
+  
+<div class="dessert">
+  <p>A Winter night <span class="price">$57-$90</span><br />
+  <small>the weather gets even colder, but its also the holiday season. Dressing up is one thing, but being warm and dressed up is another. Thats why A's Fashion Design carries designer winter dresses starting from December 2nd. </small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+<input type="email" placeholder="Please Leave Review">
+<input type="Submit">
+</body>
