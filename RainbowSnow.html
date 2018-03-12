@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport"content="width=device-width"/>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #523419;
+  }
+  p {
+	  font-family: 'Playfair Display', serif;
+  }
+  h1 {
+	  font-family: 'Ubuntu', sans-serif;
+  }
+  
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #523419;
+      font-weight: 600;
+      margin-bottom: 30px;
+      font-family: 'Roboto Mono', monospace;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #523419;
+      font-weight: 400;
+      margin-bottom: 30px;
+      font-family: 'Acme', sans-serif;
+  }  
+  .jumbotron {
+      background: url(https://hdwallsource.com/img/2014/2/fantastic-blue-wallpaper-40059-40994-hd-wallpapers.jpg);
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #6D9B8C;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #ffb3b3 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+	  background: url(http://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ);
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">PREVIEW AND IDEAS</a></li>
+        <li><a href="#services">CLOTHES OPTIONS</a></li>
+        <li><a href="#portfolio">LOCATIONS</a></li>
+        <li><a href="#pricing">PAYMENTS AND SHIPPING</a></li>
+        <li><a href="#contact">CREATE ACCOUNT</a></li>
+	 <li><a href="#clothingstatus">CLOTHING STATUS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>A's Fashion Design</h1> 
+  <p>We specialize in keeping our customers satisfied with every purchase!</p> 
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+		  <img src="">
+        <button type="button" class="btn btn-danger">Log in</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>A's Fashion Design's official Website Preview</h2><br>
+      <h4>If you're here, then you must have seen the shopping page for A's Fashion Design and need more information. Online shopping sites sometimes seem sketchy and you are afraid of how the clothing will be delivered. On this page, customer service is available. With this you will be able to know when your packages will arrive, and even be able to send it back for a free replacement if our clothing does not meet you're expectations. Dont worry though because we ensure that everything is of great quality. </h4><br>
+      <p>A's Fashion Design has several stores all over the world. Our HQ's are in California, New York, and Italy. </p>
+      <br><button class="btn btn-default btn-lg">Need More Info</button>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://www.wpclipart.com/computer/laptop/laptop_glossy.png" width="200px">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="http://findmybusinessonline.com.au/wp-content/uploads/2016/12/icon-WorldWideWeb.png" width="320px">
+    </div>
+    <div class="col-sm-8">
+      <h2>IDEAS</h2><br>
+      <h4><strong>Background:</strong> A's Fashion Design was founded in 1986 by Areanna Persaud. Its been running for about 32 years now and is growing every year. Our main value is cutomer satisfaction. </h4><br>
+      <p><strong>GOALS:</strong> For the future, we plan on setting up HQ's in Japan and France. Also, we want to incorporate clothing designs from other countries like England, Japan, and France.  </p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>CLOTHES OPTIONS</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="https://vignette.wikia.nocookie.net/ark-soyo/images/6/60/Cotton_Icon_SPlus.png/revision/latest?cb=20170511210816" width="170px">
+      <h4>FABRIC</h4>
+      <p>We use 100% cotton for some sweaters and shirts, and organic wool</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://ae01.alicdn.com/kf/HTB1yCXKLXXXXXX8XVXXq6xXFXXXr/CR-Winter-Girl-Overcoat-Warm-Hooded-Solid-Coat-Children-Casual-Outerwear-Jacket-Coat-Kids-Girls-Outer.jpg" width="170px">
+      <h4>WINTER</h4>
+      <p>Our Winter clothing line launches from November 30th to March 10th.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://i.pinimg.com/736x/f5/c9/fb/f5c9fb480b2ff237e1ccf5932c8b8a41--grey-t-shirts-gray-shirt.jpg" width="150px">
+      <h4>SUMMER</h4>
+      <p>Our Summer clothing line launches from June 1st to August 20th.</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="https://media.glamour.com/photos/5695882a5fff94d44eec7123/master/w_1250,c_limit/slideshow-perfect-fall-jackets-14-2015-perfect-fall-jacket-trench-coat-uniqlo-main.jpg" width="160px">
+      <h4>FALL</h4>
+      <p>Our Fall clothing line launches from August 25th to November 25th.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=36497604" width="150px">
+      <h4>SPRING</h4>
+      <p>Our Spring clothing line launches from March 15th to May 28th.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>LOCATION</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://cdn.content.tuigroup.com/adamtui/2016_12/17_20/77375eea-24a0-4719-8f78-a6df01517061/LIB_SHU_15_F0443WebOriginalCompressed.jpg?i10c=img.resize(width:658);img.crop(width:658%2Cheight:370)" alt="Italy" width="400" height="300">
+        <p><strong>Italy</strong></p>
+        <p>we have Head Quarters in Italy and 5 stores</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg" alt="New York" width="400" height="300">
+        <p><strong>New York</strong></p>
+        <p>We have 3 stores in NY</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1024,c_fill,g_auto,h_576,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F170606120957-california---travel-destination---shutterstock-220315747.jpg" alt="California" width="400" height="300">
+        <p><strong>California</strong></p>
+        <p>We have 7 stores in Califonia. Places like LA and San Francisco</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>OUR CUSTOMER REVIEWS</h2>
+  <div id="pricing" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"I dont like shopping in person this company makes shopping enjoyable for less money"<br><span>Sara Priest, CEO,Bank of America</span></h4>
+      </div>
+      <div class="item">
+        <h4>"My computer has not seen so much style since the 80's :D"<br><span>Katherine Smith, employee @ Google</span></h4>
+      </div>
+      <div class="item">
+        <h4>"I couldn't be happier after seeing that ad for this website!!"<br><span>Christopher Pale, Realty Cube.Inc</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Payments and Shipment</h2>
+    <h4>Choose a payment and shipping plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Regular</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Debit </strong> Card</p> 
+          <p><strong>Credit</strong> Card</p>
+          <p><strong>Easy</strong> Shopping </p>
+        </div>
+        <div class="panel-footer">
+          <h4>For shopping at any time</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Monthly Packages</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Debit</strong> Card</p>
+          <p><strong>Credit</strong> Card</p>
+          <p><strong>Gift</strong> Card</p>
+          <p><strong>Endless</strong>packges every month until plan is canceled or changed</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$45</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Debit</strong> Card</p>
+          <p><strong>Credit</strong> Card</p>
+          <p><strong>Premium Gift</strong> Card</p>
+          <p><strong>Endless</strong> Shopping with 2-3 day shipping</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="clothingstatus" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">CLOTHING STATUS</h3>
+    <p class="text-center">Looking for something thats not here? Go to the "Need More Info" button after preview.<br> Look at clothing options for when new styles come out</p>
+    <ul class="list-group">
+      <li class="list-group-item">Winter Jackets <span class="badge">139</span></li>
+      <li class="list-group-item">Winter dresses <span class="badge">47</span></li> 
+      <li class="list-group-item">Spring dresses<span class="label label-danger">Fully Restocked</span></li> 
+    </ul>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CREAT ACCOUNT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Sign up for free today online, or in person</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> San Francisco, California</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +1 356-815-6009</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> areanna.design2@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(34.052235, -118.243683);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Vf7_l4knD7t6l2ER0bfeYy6sACsVJV0&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $("button").on("click", function() {
+      alert("Clicked!");
+    });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+</body>
+</html>
